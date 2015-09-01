@@ -1,6 +1,6 @@
 #include "udpsocklib.h"
 
-int sendPacket(char* ipAddress, char* port, char *data)
+int sendPacket(const char* ipAddress, const char* port, const char *data)
 {
     int sockfd;
     struct addrinfo hints, *servinfo, *p;
@@ -56,7 +56,7 @@ void *get_in_addr(struct sockaddr *sa)
     return &(((struct sockaddr_in6*)sa)->sin6_addr);
 }
 
-int listenForPacket(char* port, char *packetData, int *packetSize)
+int listenForPacket(const char* port, char **packetData)
 {
     int sockfd;
     struct addrinfo hints, *servinfo, *p;
@@ -118,8 +118,8 @@ int listenForPacket(char* port, char *packetData, int *packetSize)
         printf("udpsocklib: packet is %d bytes long\n", numbytes);
     
     buf[numbytes] = '\0';
-   // packetData = buf;
-    //*packetSize = numbytes;
+    *packetData = strdup(buf);
+   //*packetSize = numbytes;
     
         if (DEBUG_MODE)
     printf("udpsocklib: packet contains \"%s\"\n", buf);

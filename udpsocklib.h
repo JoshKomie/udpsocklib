@@ -19,6 +19,6 @@
 /*
  *
  */
-int sendPacket(char* ipAddress, char* port, char* data);
+int sendPacket(const char* ipAddress, const char* port, const char* data);
 
-int listenForPacket(char* port, char*packetData, int *packetSize);
+int listenForPacket(const char* port, char **packetData);

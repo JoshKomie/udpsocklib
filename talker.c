@@ -7,6 +7,6 @@
 int main()
 {
     
-    sendPacket("127.0.0.1", "10599", "message contents");
+    sendPacket("localhost", "10599", "message contents");
     return 0;
 }
