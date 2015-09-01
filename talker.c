@@ -1,5 +1,5 @@
 /*
- ** talker.c -- a datagram "client" demo
+ ** talker.c - example usage
  */
 
 #include "udpsocklib.h"

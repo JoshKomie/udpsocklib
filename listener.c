@@ -1,3 +1,5 @@
+//example usage
+
 #include <stdio.h>
 #include "udpsocklib.h"
 

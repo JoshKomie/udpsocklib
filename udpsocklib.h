@@ -1,4 +1,4 @@
-/* udpsocklib is a light framework to send and recieve udp packets with simple function calls.
+/* udpsocklib - easily send and recieve udp packets
  *
  *
  *
