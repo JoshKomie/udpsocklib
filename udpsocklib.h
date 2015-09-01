@@ -1,4 +1,4 @@
-/* udpsocklib - easily send and recieve udp packets
+/* udpsocklib - easily send and receive udp packets
  *
  *
  *
