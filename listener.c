@@ -5,11 +5,14 @@
 
 int main()
 {
-    char *results;
-    int *size;
-    listenForPacket("10599", &results);
-   
-    printf("received packet with data %s", results);
+    char *results, *sender;
+    while (1)
+	{
+		listenForPacketAndSource("10599", &results, &sender);
+        printf("received packet with data %s from address %s\n", results, sender);
+		sendPacket(sender, "10599", results);
+	}
+    
     return 0;
     
 }
